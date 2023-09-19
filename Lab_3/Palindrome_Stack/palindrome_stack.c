@@ -18,7 +18,7 @@ void AddStringToStack(char s[100]) {
 int main() {
     char s[100];
     int flag = 1;
-    printf(">> Enter string to check:\n__ ");
+    printf(" >> Enter string to check:\n __ ");
     scanf("%s", s);
 
     AddStringToStack(s);
@@ -26,10 +26,12 @@ int main() {
     int i = 0;
     top--;
 
+    printf("\n >> Matching extreme characters ...\n");
+
     while(top >= 0) {
-        printf("\n++ %c %c", stack[top], s[i]);
+        printf("\n %c %c", stack[top], s[i]);
         if(stack[top] != s[i]) {
-            printf("\n\n-- Entered String is Not a Palindrome !!\n");
+            printf("\n\n -- Entered String is Not a Palindrome !!\n");
             flag = 0;
             break;
         }
@@ -38,7 +40,7 @@ int main() {
     }
 
     if(flag == 1) {
-        printf("\n\n-- Entered String is a Palindrome !!\n");
+        printf("\n\n -- Entered String is a Palindrome !!\n");
     }
 
     return 0;
